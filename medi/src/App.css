@@ -6,3 +6,8 @@
   display: flex;
 justify-content: space-around;
 }
+.flexbox div{
+width: 20%;
+background-color:teal ;
+
+}
