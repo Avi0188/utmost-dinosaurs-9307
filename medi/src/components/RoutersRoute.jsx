@@ -5,6 +5,8 @@ import About from './About'
 import Services from './Services'
 import Pages from './Pages'
 import Cases from './Cases'
+import Appointment from './Appointment'
+import Admin from './Admin'
 export default function RoutersRoute() {
   return (
     <Routes>
@@ -13,6 +15,8 @@ export default function RoutersRoute() {
     <Route path="/services" element={<Services/>}></Route>
     <Route path="/pages" element={<Pages/>}></Route>
     <Route path="/cases" element={<Cases/>}></Route>
+    <Route path="/appointment" element={<Appointment/>}></Route>
+    <Route path="/admin" element={<Admin/>}></Route>
   </Routes>
   )
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import '../App.css';
 import { Link } from 'react-router-dom'
-
+// import { Link } from '@chakra-ui/react'
+// import { ExternalLinkIcon } from '@chakra-ui/icons'
 function Navbar() {
   return (
     <div className='link'>
