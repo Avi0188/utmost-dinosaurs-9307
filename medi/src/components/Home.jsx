@@ -1,19 +1,21 @@
 import React from 'react'
-import './home.css';
+import "./home.css";
 import { Button } from '@chakra-ui/react'
 import { Navigate } from 'react-router-dom';
 import Appointment from './Appointment';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import Navbar from './Navbar';
 export default function Home() {
 
   return (
-    <div className='containter' style={{backgroundColor:"#FFFFFF"}}> 
+    <div className='main-containter' > 
       <div style={{display:'flex', justifyContent:'space-around', marginTop:"5%"}}>
         <div style={{marginLeft:"5%"}}>
           <p style={{color:"teal"}}>--perfectsolutionforyourMindset</p>
   <h2 style={{color:"teal"}}>We Will Help You To Understand & Solve The Problem</h2>
 
-  <Button colorScheme='teal' size='md' marginTop={"5%"}> <Link to="/appointment">Get Appointment</Link> </Button>
+  <Button colorScheme='teal' size='md' marginTop={"5%"}><Link to="/appointment">Get Appointment</Link></Button>
   </div>
 
   <div style={{borderTopLeftRadius:"30%", width:"25%"}}>
@@ -23,20 +25,21 @@ export default function Home() {
  
 
 
-  <div style={{display:'flex', justifyContent:"space-around", marginTop:"5%"}}>
-    <div id='box' style={{ backgroundColor:"teal", width:"20%"}}>
+  <div id='box'>
+ 
+    <div className='subbox'  style={{ backgroundColor:"teal"}}>
       <img src="" alt="" />
       <h2>Dedicated Therapist</h2>
       <p style={{}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. To discuss the issue ipsum dolor sit amet, consectetur adipisicing elit. </p>
       <button>Learn More</button>
     </div>
-    <div style={{ backgroundColor:"#FF7D33" , width:"20%"}}>
+    <div className='subbox' style={{ backgroundColor:"#FF7D33" }}>
     <img src="" alt="" />
       <h2>Satisfied Services</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. To discuss the issue. ipsum dolor sit amet, consectetur adipisicing elit. </p>
       <button>Learn More</button>
     </div>
-    <div style={{backgroundColor:"teal" , width:"20%"}}>
+    <div className='subbox' style={{backgroundColor:"teal" }}>
     <img src="" alt="" />
       <h2>Support Patient</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. To discuss the  ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -63,7 +66,7 @@ export default function Home() {
   </div>
 
 <div style={{display:"flex", justifyContent:'space-around'}}>
-  <div style={{backgroundColor:"#FF7D33" }}>
+  <div>
     <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcAPk3tB_aBB8ujcwlW_UcP4FCj_AwEEqBFK0pAkGxFlIAIZCA" alt="Doctors" />
   </div>
   <div style={{width:"25%", marginTop:"5%"}}>
@@ -71,6 +74,7 @@ export default function Home() {
     <p style={{color:"teal"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quos voluptatum neque quae enim architecto dolor, eum iste quod praesentium voluptatibus mollitia? Incidunt harum adipisci quasi doloremque, minima iure possimus.</p>
   </div>
 </div>
+<Footer />
     </div>
   )
 }

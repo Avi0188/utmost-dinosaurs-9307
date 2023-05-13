@@ -1,6 +1,8 @@
 import React from 'react'
 import { FormControl , FormLabel, Select, Input, Button, Form} from '@chakra-ui/react'
 import { useState } from 'react'
+import Footer from './Footer'
+import "./appointment.css";
 const initialData={
     name:"",
     adress:"",
@@ -24,7 +26,8 @@ export default function Appointment() {
   .then((response)=>{
  setData(response)
     console.log(response)
-  
+    alert("appointment booked")
+  setData(initialData)
   })
    }
 const handleChange=(e)=>{
@@ -34,22 +37,23 @@ setData({...data, [e.target.name]: e.target.value})
 }
 
   return (
-    <div style={{width:"30%", margin:"auto", marginTop:"5%",backgroundColor:"teal" ,padding:"2%"}}
+    <div className='appointment'>
+ <div style={{width:"30%", margin:"auto", marginTop:"5%",backgroundColor:"teal" ,padding:"2%", borderRadius:"2px" }}
     > 
-     <form style={{backgroundColor:"teal"}} onSubmit={handleBook}>
-     <FormLabel>Name</FormLabel>
-     <Input type='text' placeholder="Patient Name" name='name' onChange={handleChange} />
+     <form className='form' style={{backgroundColor:"teal"}} onSubmit={handleBook}>
+     <FormLabel className='large'>Name</FormLabel>
+     <Input style={{backgroundColor:"white" , fontSize:"large"}} className='appointment-input' type='text' placeholder="Patient Name" name='name' onChange={handleChange} />
      <FormLabel typeof='text'>Adress</FormLabel>
-     <Input placeholder="Patient Adress" name='adress' onChange={handleChange} />
+     <Input style={{backgroundColor:"white" , fontSize:"large"}}   className='appointment-input' placeholder="Patient Adress" name='adress' onChange={handleChange} />
      <FormLabel>Date</FormLabel>
-     <Input
+     <Input style={{backgroundColor:"white" , fontSize:"large"}}  className='appointment-input'
  placeholder="Select Date"
  type="date"
  name='date'
  onChange={handleChange}
 />
      <FormLabel>Mob. No.</FormLabel>
-     <Input type="Number" name='mob' placeholder="Mobile Number"  onChange={handleChange} />
+     <Input style={{backgroundColor:"white" , fontSize:"large"}}  className='appointment-input' type="Number" name='mob' placeholder="Mobile Number"  onChange={handleChange} />
   <FormLabel>Doctors</FormLabel>
   <select placeholder='Select Doctors' name="doctor"  onChange={handleChange}>
     <option>Select Doctor</option>
@@ -61,8 +65,13 @@ setData({...data, [e.target.name]: e.target.value})
   </select>
   <br/>
   <br/>
-<button type='submit'>Book</button>
+<button className='button' type='submit'>Book</button>
 </form>
     </div>
+    <div>
+      <Footer />
+    </div>
+    </div>
+   
   )
 }

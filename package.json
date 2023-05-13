@@ -5,6 +5,7 @@
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.12.8",
     "g": "^2.0.1",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.1"
   }
 }

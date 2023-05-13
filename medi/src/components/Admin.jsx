@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./admin.css"
 import {
     Table,
     Thead,
@@ -57,7 +58,7 @@ getfetchdata()
         <Td>{e.date}</Td>
         <Td>{e.mob}</Td>
         <Td>{e.doctor}</Td>
-        <Td onClick={handleRemove}>Remove</Td>
+        {/* <Td onClick={handleRemove}>Remove</Td> */}
    
       </Tr>
       

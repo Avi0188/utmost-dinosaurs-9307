@@ -7,6 +7,7 @@ import Pages from './Pages'
 import Cases from './Cases'
 import Appointment from './Appointment'
 import Admin from './Admin'
+import Login from './AdminLogin'
 export default function RoutersRoute() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ export default function RoutersRoute() {
     <Route path="/cases" element={<Cases/>}></Route>
     <Route path="/appointment" element={<Appointment/>}></Route>
     <Route path="/admin" element={<Admin/>}></Route>
+    <Route path="/login" element={<Login/>}></Route>
   </Routes>
   )
 }
