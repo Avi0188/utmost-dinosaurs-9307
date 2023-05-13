@@ -1,13 +1,5 @@
 .App {
+  /* font-family: sans-serif; */
   text-align: center;
-}
-
-.link{
-  display: flex;
-justify-content: space-around;
-}
-.flexbox div{
-width: 20%;
-background-color:teal ;
-
+  /* font-size: larger; */
 }

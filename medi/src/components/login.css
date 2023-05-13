@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+  }
+
+  .login{
+    margin-top: 5%;
+  }
+
+  .input{
+ 
+   /* border-style: none;  */
+    width: larger;
+    font-size: xx-large;
+  }

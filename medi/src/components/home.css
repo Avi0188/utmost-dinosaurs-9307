@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
 p{
-    color: "teal";
+  font-size: large;
+}
+h2{
+  font-size: large;
+}
+h1{
+  font-size: large;
+}
+.main-containter{
+border: 2px solid whitesmoke;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#box{
+  display: grid;
+  margin-top: 5%;
+  grid-template-columns: repeat(3,1fr);
+  gap: 4%;
+}
+@media (max-width: 990px) {
+  #box{
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: repeat(1,1fr);
+    gap: 5%;
   }
+
+}
